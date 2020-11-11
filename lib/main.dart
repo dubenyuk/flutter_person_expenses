@@ -38,8 +38,12 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           
-          Card(
-            child: Text('List of transactions')
+          Column(
+            children: transactions.map((tx) {
+              return Card(
+                child: Text(tx.title),
+              );
+            }).toList(),
           ),
         ]
       ),
